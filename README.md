@@ -1,5 +1,5 @@
 # floh4x
-Download videos off flograppling CDN
+Download videos off FloSports CDN (flograppling, flowrestling, and other Flo sites)
 
 ## Requirements
 
@@ -9,10 +9,20 @@ Download videos off flograppling CDN
 ## Usage
 
 ```
-floh4x <flograppling-video-url> [output-filename]
+floh4x <flo-video-url> [output-filename]
 ```
 
 The optional `output-filename` argument lets you choose the name of the saved `.mp4` file. If omitted, the filename is derived from the URL slug. The `.mp4` extension is added automatically (but accepted if provided).
+
+Supports both direct video URLs and event pages with a `?playing=` parameter:
+
+```
+# Direct video URL
+floh4x https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell
+
+# Event page with playing param
+floh4x https://www.flowrestling.org/events/14829511-2026-chsaa-co-state-championships/videos?playing=15465329
+```
 
 ## Quick Start (uvx)
 
