@@ -11,7 +11,7 @@ Download videos off flograppling CDN
 The easiest way to run floh4x is with [uv](https://docs.astral.sh/uv/):
 
 ```
-uvx --from git+https://github.com/Amarto/floh4x floh4x https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
+uvx --from git+https://github.com/danwelch3/flo-downloader floh4x https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
 ```
 
 ## Manual Installation
