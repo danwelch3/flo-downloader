@@ -1,19 +1,24 @@
 # floh4x
 Download videos off flograppling CDN
 
-Uses python 3.
+## Requirements
 
-You need:
-- ffmpeg installed on your computer (http://jollejolles.com/install-ffmpeg-on-mac-os-x/)
-- Python 3.x installed
-- pip (package manager) installed
+- [ffmpeg](http://jollejolles.com/install-ffmpeg-on-mac-os-x/) installed on your computer
+- Python 3.8+
 
-See https://www.digitalocean.com/community/tutorials/how-to-install-python-3-and-set-up-a-local-programming-environment-on-macos for help on this.
+## Quick Start (uvx)
 
-First, install requirements with `pip install -Ur requirements.txt`
-Usage:
+The easiest way to run floh4x is with [uv](https://docs.astral.sh/uv/):
+
 ```
+uvx --from git+https://github.com/Amarto/floh4x floh4x https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
+```
+
+## Manual Installation
+
+```
+pip install -Ur requirements.txt
 python main.py https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
 ```
 
-It will download the file to `6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship.mp4` in the directory you run it in.
+The video will be saved as `6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship.mp4` in the current directory.
