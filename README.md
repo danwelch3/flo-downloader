@@ -14,9 +14,11 @@ The easiest way to run floh4x is with [uv](https://docs.astral.sh/uv/):
 uvx --from git+https://github.com/danwelch3/flo-downloader floh4x https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
 ```
 
-## Manual Installation
+## Run from Local Clone
 
-```
+```bash
+git clone https://github.com/danwelch3/flo-downloader.git
+cd flo-downloader
 pip install -Ur requirements.txt
 python main.py https://www.flograppling.com/video/6458762-levi-jones-leary-vs-oliver-lovell-abu-dhabi-world-professional-jiu-jitsu-championship
 ```
