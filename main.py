@@ -20,11 +20,13 @@ def get_cdn_url(cdn_video_id):
 
 if __name__ == '__main__':
     url = sys.argv[1]
-    location_to_save = url.split('/')[4]
+    location_to_save = sys.argv[2] if len(sys.argv) > 2 else url.split('/')[4]
+    if location_to_save.endswith('.mp4'):
+        location_to_save = location_to_save[:-4]
     video_id = re.findall('\d+', url)[0]
     cdn_url = get_cdn_url(video_id)
 
     command = f'ffmpeg -i {cdn_url} -bsf:a aac_adtstoasc -c copy {location_to_save}.mp4'
     subprocess.call(command, shell=True)
 
-    print('Successfully saved FloGrappling video as', location_to_save, '.mp4')
+    print('Successfully saved FloGrappling video as', f'{location_to_save}.mp4')
